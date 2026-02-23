@@ -1,5 +1,5 @@
 ## VidEoMT: Your ViT is Secretly Also a Video Segmentation Model
-**CVPR 2026** · **[📄 Paper](?)**
+**CVPR 2026** · **[📄 Paper](https://arxiv.org/pdf/2602.17807v1)**
 
 **[Narges Norouzi](https://scholar.google.com/citations?user=q7sm490AAAAJ)<sup>1</sup>, [Idil Esen Zulfikar](https://scholar.google.com/citations?user=89vcmSoAAAAJ&hl=en)<sup>2,\*</sup>, [Niccolò Cavagnero](https://scholar.google.com/citations?user=Pr4XHRAAAAAJ)<sup>1,\*</sup>, [Tommie Kerssies](https://tommiekerssies.com)<sup>1</sup>, [Bastian Leibe](https://scholar.google.com/citations?user=ZcULDB0AAAAJ)<sup>2</sup>, [Gijs Dubbelman](https://scholar.google.nl/citations?user=wy57br8AAAAJ)<sup>1</sup>, [Daan de Geus](https://ddegeus.github.io)<sup>1</sup>**
 
