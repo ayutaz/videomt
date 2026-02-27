@@ -11,7 +11,7 @@
 
 ![VidEoMT Overview](./docs/static/images/teaser_arch.jpeg)
 
-We introduce **Video Enocoder-only Mask Transformer (VidEoMT)**, a lightweight encoder-only model for online video segmentation built on a plain Vision Transformer (ViT). It performs both spatial and temporal reasoning within the ViT encoder, without relying on dedicated tracking modules or heavy task-specific heads.
+We introduce **Video Encoder-only Mask Transformer (VidEoMT)**, a lightweight encoder-only model for online video segmentation built on a plain Vision Transformer (ViT). It performs both spatial and temporal reasoning within the ViT encoder, without relying on dedicated tracking modules or heavy task-specific heads.
 
 VidEoMT propagates information over time by reusing queries from the previous frame and fusing them with a compact set of learned, frame-agnostic queries. This design achieves competitive accuracy while being 5x–10× faster than existing approaches, reaching up to 160 FPS with a ViT-L backbone.
 
