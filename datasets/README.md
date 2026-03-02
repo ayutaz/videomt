@@ -1,15 +1,14 @@
-# Prepare Datasets 
+# データセットの準備
 
-A dataset can be used by accessing [DatasetCatalog](https://detectron2.readthedocs.io/modules/data.html#detectron2.data.DatasetCatalog)
-for its data, or [MetadataCatalog](https://detectron2.readthedocs.io/modules/data.html#detectron2.data.MetadataCatalog) for its metadata (class names, etc).
-This document explains how to setup the builtin datasets so they can be used by the above APIs.
-[Use Custom Datasets](https://detectron2.readthedocs.io/tutorials/datasets.html) gives a deeper dive on how to use `DatasetCatalog` and `MetadataCatalog`,
-and how to add new datasets to them.
+データセットは、データにアクセスするための [DatasetCatalog](https://detectron2.readthedocs.io/modules/data.html#detectron2.data.DatasetCatalog)、
+またはメタデータ（クラス名など）にアクセスするための [MetadataCatalog](https://detectron2.readthedocs.io/modules/data.html#detectron2.data.MetadataCatalog) を使用して利用できます。
+このドキュメントでは、上記の API で使用できるように組み込みデータセットをセットアップする方法を説明します。
+[カスタムデータセットの使用](https://detectron2.readthedocs.io/tutorials/datasets.html) では、`DatasetCatalog` と `MetadataCatalog` の使い方、
+および新しいデータセットの追加方法についてより詳しく解説しています。
 
-VidEoMT has builtin support for a few datasets.
-The datasets are assumed to exist in a directory specified by the environment variable
-`DETECTRON2_DATASETS`.
-Under this directory, detectron2 will look for datasets in the structure described below, if needed.
+VidEoMT はいくつかのデータセットを組み込みでサポートしています。
+データセットは環境変数 `DETECTRON2_DATASETS` で指定されたディレクトリに存在することを前提としています。
+このディレクトリ配下で、detectron2 は必要に応じて以下の構造でデータセットを探します。
 ```
 $DETECTRON2_DATASETS/
   ytvis_2019/
@@ -19,12 +18,12 @@ $DETECTRON2_DATASETS/
   VSPW_480p/
 ```
 
-You can set the location for builtin datasets by `export DETECTRON2_DATASETS=/path/to/datasets`.
-If left unset, the default is `./datasets` relative to your current working directory.
+組み込みデータセットの場所は `export DETECTRON2_DATASETS=/path/to/datasets` で設定できます。
+未設定の場合、デフォルトは現在の作業ディレクトリからの相対パス `./datasets` になります。
 
 
 
-## Expected dataset structure for [YouTube-VIS 2019](https://competitions.codalab.org/competitions/20128):
+## [YouTube-VIS 2019](https://competitions.codalab.org/competitions/20128) の想定データセット構造:
 
 ```
 ytvis_2019/
@@ -34,7 +33,7 @@ ytvis_2019/
     JPEGImages/
 ```
 
-## Expected dataset structure for [YouTube-VIS 2021](https://competitions.codalab.org/competitions/28988):
+## [YouTube-VIS 2021](https://competitions.codalab.org/competitions/28988) の想定データセット構造:
 
 ```
 ytvis_2021/
@@ -42,10 +41,10 @@ ytvis_2021/
   {train,valid,test}/
     JPEGImages/
     instances.json
-    
+
 ```
 
-## Expected dataset structure for [YouTube-VIS 2022](https://codalab.lisn.upsaclay.fr/competitions/3410#participate-get_data):
+## [YouTube-VIS 2022](https://codalab.lisn.upsaclay.fr/competitions/3410#participate-get_data) の想定データセット構造:
 
 ```
 ytvis_2022/
@@ -54,10 +53,10 @@ ytvis_2022/
   {train,valid,test}/
     JPEGImages/
     instances.json
-  
+
 ```
 
-## Expected dataset structure for [OVIS](http://songbai.site/ovis/):
+## [OVIS](http://songbai.site/ovis/) の想定データセット構造:
 
 ```
 ovis/
@@ -66,9 +65,9 @@ ovis/
   {train,valid,test}/
 ```
 
-## Expected dataset structure for [VIPSeg](https://github.com/VIPSeg-Dataset/VIPSeg-Dataset):
+## [VIPSeg](https://github.com/VIPSeg-Dataset/VIPSeg-Dataset) の想定データセット構造:
 
-After downloading the VIPSeg dataset, it still needs to be processed according to the official script (`/datasets/utils/vipseg_change2_720p.py`). To save time, you can directly download the processed VIPSeg dataset from [baiduyun](https://pan.baidu.com/s/1SMausnr6pVDJXTGISeFMuw) (password is `dvis`). 
+VIPSeg データセットをダウンロードした後、公式スクリプト（`/datasets/utils/vipseg_change2_720p.py`）に従って処理する必要があります。時間を節約するために、処理済みの VIPSeg データセットを [百度网盘](https://pan.baidu.com/s/1SMausnr6pVDJXTGISeFMuw)（パスワード: `dvis`）から直接ダウンロードすることもできます。
 ```
 VIPSeg/
   VIPSeg_720P/
@@ -77,38 +76,38 @@ VIPSeg/
     panoptic_gt_VIPSeg_{train,val,test}.json
 ```
 
-## Expected dataset structure for [VSPW](https://github.com/VSPW-dataset/VSPW-dataset-download):
+## [VSPW](https://github.com/VSPW-dataset/VSPW-dataset-download) の想定データセット構造:
 ```
 VSPW_480p/
   data/
     video_1/
       mask/
-      origin/   
+      origin/
   train.txt
   val.txt
   test.txt
   data.txt
   abel_num_dic_final.json
-  
+
 
 ```
 
-## Register your own dataset:
+## 独自データセットの登録:
 
-- If it is a VIS/VPS/VSS dataset, convert it to YTVIS/VIPSeg/VSPW format. If it is a image instance dataset, convert it to COCO format.
-- Register it in `/videomt/data_video/datasets/{builtin,vps,vss}.py`
+- VIS/VPS/VSS データセットの場合は、YTVIS/VIPSeg/VSPW 形式に変換してください。画像インスタンスデータセットの場合は、COCO 形式に変換してください。
+- `/videomt/data_video/datasets/{builtin,vps,vss}.py` で登録してください。
 
-## Convert COCO to YTVIS / OVIS format
+## COCO から YTVIS / OVIS 形式への変換
 
-VidEoMT provides a helper script (copied from DVIS++) to convert COCO annotations into subsets compatible with **YTVIS 2019**, **YTVIS 2021**, and **OVIS**, by filtering COCO categories.
+VidEoMT は、COCO アノテーションを COCO カテゴリでフィルタリングすることで **YTVIS 2019**、**YTVIS 2021**、**OVIS** と互換性のあるサブセットに変換するヘルパースクリプト（DVIS++ からコピー）を提供しています。
 
-The script expects the COCO annotation file to be located at:
+このスクリプトは、COCO アノテーションファイルが以下の場所にあることを前提としています:
 
 ```bash
 $DETECTRON2_DATASETS/coco/annotations/instances_train2017.json
 ```
 
-It generates the following files under:
+以下のディレクトリに次のファイルが生成されます:
 
 ```bash
 $DETECTRON2_DATASETS/coco/annotations/
@@ -118,7 +117,7 @@ coco2ytvis2021_train.json
 coco2ovis_train.json
 ```
 
-To run the conversion script:
+変換スクリプトの実行方法:
 ```bash
 python tools/convert_coco_to_vis.py
 ```

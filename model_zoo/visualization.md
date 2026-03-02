@@ -1,8 +1,8 @@
-## Visualization
+## 可視化
 
-1. First, select the model and its corresponding configuration file. You can choose them from the
-   [model zoo](model_zoo/dinov2).
-2. Then, run the following command:
+1. まず、モデルと対応する設定ファイルを選択します。
+   [モデルZoo](model_zoo/dinov2)から選択できます。
+2. 次に、以下のコマンドを実行します:
 
 ```bash
 cd visualization
@@ -14,8 +14,7 @@ python video_demo.py \
   --opts MODEL.WEIGHTS /path/to/weight.pth
 ```
 
-🔧 Replace `/path/to/config.yaml` with the path to the config file.  
-🔧 Replace `/path/to/images_folder` with the path to the folder containing the video frames..  
-🔧 Replace `/path/to/weight.pth` with the path to the checkpoint to evaluate.   
-🔧 Replace `/path/to/output` with the path to the output folder.  
-
+`/path/to/config.yaml` を設定ファイルのパスに置き換えてください。
+`/path/to/images_folder` を動画フレームが格納されたフォルダのパスに置き換えてください。
+`/path/to/weight.pth` を評価するチェックポイントのパスに置き換えてください。
+`/path/to/output` を出力フォルダのパスに置き換えてください。

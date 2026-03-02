@@ -1,5 +1,5 @@
-## Evaluation
-To evaluate a pre-trained VidEoMT model , first prepare the datasets by following the instructions in this [link](../datasets/README.md) and download the trained weights from [here](dinov2.md). Once these are set up, run:
+## 評価
+事前学習済みのVidEoMTモデルを評価するには、まずこの[リンク](../datasets/README.md)の手順に従ってデータセットを準備し、[こちら](dinov2.md)から学習済みの重みをダウンロードしてください。準備が完了したら、以下を実行します:
 
 
 ### YouTube-VIS 2019, YouTube-VIS 2021, OVIS<sup>*</sup>
@@ -9,14 +9,14 @@ python train_net_video.py \
   --num-gpus 1 \
   --config-file /path/to/config.yaml \
   --eval-only MODEL.WEIGHTS /path/to/weight.pth
-  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \ 
+  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \
   OUTPUT_DIR /path/to/output
 ```
 
-🔧 Replace `/path/to/config.yaml` with the path to the config file.  
-🔧 Replace `/path/to/weight.pth` with the path to the checkpoint to evaluate.   
-🔧 Replace `/path/to/output` with the path to the output folder.  
-🔧 Change the value of `--num-gpus` to the number of GPUs available to you.
+🔧 `/path/to/config.yaml` を設定ファイルのパスに置き換えてください。
+🔧 `/path/to/weight.pth` を評価するチェックポイントのパスに置き換えてください。
+🔧 `/path/to/output` を出力フォルダのパスに置き換えてください。
+🔧 `--num-gpus` の値を利用可能なGPUの数に変更してください。
 
 
 ### YouTube-VIS 2022
@@ -26,16 +26,16 @@ python train_net_video.py \
   --num-gpus 1 \
   --config-file /path/to/config.yaml \
   --eval-only MODEL.WEIGHTS /path/to/weight.pth
-  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \ 
+  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \
   OUTPUT_DIR /path/to/output
 ```
-After generating the inference images using the above command, to calculate the AP for long videos, run:
+上記のコマンドで推論画像を生成した後、長い動画のAPを計算するには以下を実行します:
 
 ``` bash
 python utils/yt2022_evaluate.py /path/to/dataset/ytvis_2022  /path/to/output/inference
 ```
-🔧 Replace `/path/to/dataset` with the path to the dataset folder.  
-🔧 Replace `/path/to/output` with the path to the output folder.  
+🔧 `/path/to/dataset` をデータセットフォルダのパスに置き換えてください。
+🔧 `/path/to/output` を出力フォルダのパスに置き換えてください。
 
 ### VIPSeg
 
@@ -44,10 +44,10 @@ python train_net_video.py \
   --num-gpus 1 \
   --config-file /path/to/config.yaml \
   --eval-only MODEL.WEIGHTS /path/to/weight.pth
-  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \ 
+  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \
   OUTPUT_DIR /path/to/output
 ```
-After generating the inference images using the above command, to calculate the VPQ and STQ, run:
+上記のコマンドで推論画像を生成した後、VPQとSTQを計算するには以下を実行します:
 
 ``` bash
 DATAROOT='/path/to/dataset/VIPSeg_720P/panomasksRGB'
@@ -59,8 +59,8 @@ python utils/eval_vpq_vspw.py --submit_dir $IMGSAVEROOT --truth_dir $DATAROOT --
 # # ###STQ
 python utils/eval_stq_vspw.py --submit_dir $IMGSAVEROOT --truth_dir $DATAROOT --pan_gt_json_file $GT_JSONFILE
 ```
-🔧 Replace `/path/to/dataset` with the path to the dataset folder.  
-🔧 Replace `/path/to/output` with the path to the output folder.  
+🔧 `/path/to/dataset` をデータセットフォルダのパスに置き換えてください。
+🔧 `/path/to/output` を出力フォルダのパスに置き換えてください。
 
 ### VSPW
 
@@ -69,10 +69,10 @@ python train_net_video.py \
   --num-gpus 1 \
   --config-file /path/to/config.yaml \
   --eval-only MODEL.WEIGHTS /path/to/weight.pth
-  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \ 
+  MODEL.BACKBONE.TEST.WINDOW_SIZE 1 \
   OUTPUT_DIR /path/to/output
 ```
-After generating the inference images using the above command, to calculate the mVC<sub>16</sub> and mIoU, run:
+上記のコマンドで推論画像を生成した後、mVC<sub>16</sub>とmIoUを計算するには以下を実行します:
 
 ``` bash
 DATAROOT='/path/to/dataset/VSPW_480p'
@@ -82,5 +82,5 @@ python utils/eval_miou_vspw.py  $DATAROOT $IMGSAVEROOT
 python utils/eval_vc_vspw.py $DATAROOT  $IMGSAVEROOT
 
 ```
-🔧 Replace `/path/to/dataset` with the path to the dataset folder.  
-🔧 Replace `/path/to/output` with the path to the output folder.  
+🔧 `/path/to/dataset` をデータセットフォルダのパスに置き換えてください。
+🔧 `/path/to/output` を出力フォルダのパスに置き換えてください。

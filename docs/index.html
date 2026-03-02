@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="VidEoMT reveals Vision Transformers can perform video segmentation efficiently without task-specific components ." />
+  <meta name="description" content="VidEoMTは、Vision Transformerがタスク固有のコンポーネントなしで効率的に動画セグメンテーションを実行できることを明らかにします。" />
   <meta name="keywords" content="VidEoMT, ViT, vision transformer, transformers, video segmentation, semantic segmentation, instance segmentation, panoptic segmentation, segmentation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VidEoMT: Your ViT is Secretly Also a Video Segmentation Model </title>
@@ -76,7 +76,7 @@
             <span class="author-block"><sup>1</sup>&nbsp;Eindhoven University of Technology,</span>
             <span class="author-block"><sup>2</sup>&nbsp;RWTH Aachen University</span>
           </div>
-          <p class="has-text-centered mt-1" style="font-size: 0.6em;"> <em>* Equal contribution.</em></p>
+          <p class="has-text-centered mt-1" style="font-size: 0.6em;"> <em>* 同等の貢献</em></p>
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -88,7 +88,7 @@
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>論文</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -99,7 +99,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>コード</span>
                   </a>
               </span>
           </div>
@@ -129,7 +129,7 @@
         <div class="column is-12">
           <figure class="image">
             <img src="./static/images/teaser_arch.jpeg"
-                alt="Architecture Diagram"
+                alt="アーキテクチャ図"
                 style="width:100%; height:auto; display:block;">
           </figure>
         </div>
@@ -138,7 +138,7 @@
         <div class="column is-6">
           <figure class="image" style="text-align:center;">
             <img src="./static/images/teaser_plot_.jpg"
-                alt="Performance Plot"
+                alt="性能プロット"
                 style="width:100%; max-width:380px; height:auto; display:inline-block;">
           </figure>
         </div>
@@ -156,15 +156,15 @@
     <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
+        <h2 class="title is-3">概要</h2>
         <div class="content has-text-justified">
           <p>
-            Existing online video segmentation models typically pair a per-frame segmenter with complex tracking modules, which increases architectural complexity and computational cost. We propose the <b>Video Encoder-only Mask Transformer (VidEoMT)</b>, a simple encoder-only video segmentation model built on a plain ViT that removes the need for dedicated tracking modules.
+            既存のオンライン動画セグメンテーションモデルは、通常フレームごとのセグメンタに複雑なトラッキングモジュールを組み合わせており、アーキテクチャの複雑さと計算コストを増大させています。本研究では、<b>Video Encoder-only Mask Transformer (VidEoMT)</b> を提案します。これは、プレーンなViT上に構築されたシンプルなエンコーダのみの動画セグメンテーションモデルであり、専用のトラッキングモジュールを不要にします。
           </p>
           <p>
-            VidEoMT performs temporal modeling via a lightweight query propagation mechanism that reuses queries from the previous frame and fuses them with a small set of temporally agnostic learned queries. This design achieves the benefits of tracking without extra overhead, reaching competitive accuracy while being 5x–10× faster and running at up to 160 FPS with a ViT-L backbone.
+            VidEoMTは、前フレームのクエリを再利用し、少数の時間非依存の学習済みクエリと融合させる軽量なクエリ伝播メカニズムにより時間的モデリングを行います。この設計により、追加のオーバーヘッドなしにトラッキングの利点を実現し、競争力のある精度を達成しながら5倍から10倍高速に動作し、ViT-Lバックボーンで最大160 FPSを実現します。
           </p>
-          
+
         </div>
       </div>
     </div>
@@ -175,7 +175,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3"> Video Encoder-only Mask Transformer (VidEoMT)</h2>
-        <img src="./static/images/arch.jpeg" alt="Method Figure" style="width:100%; max-width: 900px; margin-top:1em; display:block; margin-left:auto; margin-right:auto;" />
+        <img src="./static/images/arch.jpeg" alt="手法の図" style="width:100%; max-width: 900px; margin-top:1em; display:block; margin-left:auto; margin-right:auto;" />
       </div>
     </div>
   </div>
@@ -183,7 +183,7 @@
 
 <div class="container is-max-desktop content">
   <div class="has-text-centered">
-    <h2 class="title">Citation</h2>
+    <h2 class="title">引用</h2>
   </div>
   <pre><code>@inproceedings{norouzi2026videomt,
   author     = {Norouzi, Narges and Zulfikar, Idil and Cavagnero, Niccol\`{o} and Kerssies, Tommie and Leibe, Bastian and Dubbelman, Gijs and {de Geus}, Daan},
@@ -209,8 +209,8 @@
       <div class="column is-8">
         <div class="content is-small has-text-centered">
           <p>
-            This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>.
+            このウェブサイトは <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> を基に作成されており、
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 ライセンス</a>の下で公開されています。
           </p>
         </div>
       </div>
