@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" diff --stat)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" log --oneline -5)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" add README.md datasets/README.md docs/index.html model_zoo/dinov2.md model_zoo/dinov3.md model_zoo/evaluation.md model_zoo/segmenter_checkpoints.md model_zoo/training.md model_zoo/visualization.md CLAUDE.md)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" commit -m \"$\\(cat <<''EOF''\nTranslate all documentation to Japanese and add CLAUDE.md\n\n全ドキュメント（README.md, datasets/README.md, docs/index.html,\nmodel_zoo/*.md）を日本語に翻訳。CLAUDE.mdを新規追加。\nEOF\n\\)\")",
+      "Bash(uv:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.astral.sh)",
+      "WebFetch(domain:github.com)",
+      "Bash(ls \"C:\\\\Users\\\\yuta\\\\.claude\\\\teams\\\\uv-setup\\\\mailbox\\\\team-lead\"\" 2>/dev/null || echo \"no mailbox dir \")",
+      "Bash(nvcc:*)",
+      "Bash(where:*)",
+      "Bash(ls:*)",
+      "Bash(cmd //c \"\"\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\VC\\\\Auxiliary\\\\Build\\\\vcvarsall.bat\"\" amd64 && uv add detectron2\")",
+      "Bash(cmd /c \"\"\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\VC\\\\Auxiliary\\\\Build\\\\vcvarsall.bat\"\" amd64 && cd /d C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt && uv add detectron2\")",
+      "Bash(cmd /C \"call \"\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\VC\\\\Auxiliary\\\\Build\\\\vcvarsall.bat\"\" amd64 && cd /d C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt && uv add detectron2\")",
+      "Bash(MSVC_DIR=\"/c/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717\")",
+      "Bash(export PATH=\"$MSVC_DIR/bin/Hostx64/x64:$PATH\")",
+      "Bash(export INCLUDE=\"$MSVC_DIR/include\")",
+      "Bash(export:*)",
+      "Bash(cl.exe:*)",
+      "Bash(cl)",
+      "Bash(\"/c/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe\")",
+      "Bash(powershell:*)",
+      "Bash(git clone:*)",
+      "Bash(curl:*)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" diff)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" add .gitignore CLAUDE.md requirements.txt pyproject.toml uv.lock .python-version .claude/)",
+      "Bash(git -C \"C:\\\\Users\\\\yuta\\\\Desktop\\\\Private\\\\videomt\" commit -m \"$\\(cat <<''EOF''\nMigrate dependency management to uv and clean up\n\nrequirements.txtを削除しpyproject.toml+uv.lockに統一。\n.gitignoreに.venv/、__pycache__/、demo関連を追加。\nCLAUDE.mdの依存関係参照をpyproject.tomlに更新。\nEOF\n\\)\")"
+    ]
+  }
+}

@@ -1,5 +1,9 @@
-# Ignore all .pyc files
+# Python
 **/*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
 
 # Ignore all .pth files
 **/*.pth
@@ -11,3 +15,10 @@ booster_jobs/
 jobs/*
 
 wandb/*
+
+# Demo data
+demo_input/
+demo_output/
+
+# Weights
+weights/
